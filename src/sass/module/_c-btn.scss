@@ -11,7 +11,7 @@
   display: inline-block;
 }
 
-.p-btn{
+.l-btn{
   width: 100%;
   text-align: center;
   margin-top: rem(50);
@@ -20,6 +20,13 @@
   }
 }
 
-.p-btn--work{
+.l-btn--work{
   margin-top: rem(120);
+}
+
+.l-btn--about{
+  margin-top: rem(70);
+  @include mq("md"){
+    margin-top: rem(140);
+  }
 }

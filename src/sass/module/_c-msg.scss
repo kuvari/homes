@@ -12,23 +12,39 @@
 }
 
 .c-msg__text {
-  width: rem(400);
+  width: 90%;
   color: $text;
   font-size: rem(16);
   text-align: center;
-  padding: rem(70) rem(15);
+  padding: rem(55) rem(5);
   border-radius: 27% 73% 40% 60% / 62% 48% 52% 38%  ;
   background-color: $green;
+  @include mq("md"){
+    width: 60%;
+    padding: rem(80) rem(15);
+    order: 1;
+  }
+}
+.c-msg__img{
+  width: 50%;
+  padding-top: 10%;
+  @include mq("md"){
+    width: 40%;
+    padding-top: initial;
+  }
 }
 
 .c-msg__img img{
-  width: rem(300);
   border-radius: 30% 70% 70% 30% / 30% 34% 66% 70%;
+  position: relative;
+  width: 100%;
   margin-top: rem(-50);
+  top: rem(-20);
+  left: rem(85);
   @include mq("md"){
-    width: rem(230);
+    width: 80%;
     margin-top: initial;
-    position: relative;
-    left: rem(-15);
+    top: rem(90);
+    left: rem(100);
   }
 }
