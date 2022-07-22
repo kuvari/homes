@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.c-hamburger {
+  position: relative;
+  width: 25px;
+  width: 1.5625rem;
+  height: 24px;
+  height: 1.5rem;
+  z-index: 99;
+  @include mq("md"){
+    display: none;
+  }
+}
+
+.c-hamburger::before{
+  content: 'メニュー';
+  display: block;
+  margin: 20px -10px;
+  width: 3rem;
+  height: 1rem;
+  font-size: 12px;
+  color: #143423;
+}
+
+.c-hamburger span {
+  position: absolute;
+  width: inherit;
+  height: 3px;
+  height: 0.1875rem;
+  background-color: #66CDAA;
+  -webkit-transition: 0.38s;
+  transition: 0.38s;
+  margin-top: -3.5px;
+  margin-top: -0.21875rem;
+}
+
+.c-hamburger span:nth-child(1) {
+  top: 15%;
+}
+
+.c-hamburger span:nth-child(2) {
+  top: 50%;
+}
+
+.c-hamburger span:nth-child(3) {
+  top: 85%;
+}
+
+.c-hamburger.is-active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.c-hamburger.is-active span:nth-child(2) {
+  top: 50%;
+  opacity: 0;
+}
+
+.c-hamburger.is-active span:nth-child(3) {
+  top: 50%;
+   transform: rotate(-45deg);
+}

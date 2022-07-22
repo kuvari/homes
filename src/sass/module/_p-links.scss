@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.p-sp-links{
+  width: 100%;
+  display: flex;
+}
+.p-sp-link{
+  width: 25%;
+  background-color: #FF8043;
+  padding: 5px;
+  height: 100%;
+  @include mq("md"){
+    display: none;
+  }
+}
+.p-sp-link:hover{
+  background-color: #66CDAA;
+}
+.p-sp-link img{
+  width: 35px;
+  margin: 0 auto;
+  height: 50px;
+}
+.p-sp-link::after{
+  content: "問い合わせ";
+  display: block;
+  font-size: 10px;
+  color: #143423;
+  text-align: center;
+}
+
+.p-pc-links{
+  display: none;
+  @include mq("md"){
+    display: block;
+    width: 80px;
+    position: fixed;
+    right: 0;
+    top: 100px;
+  }
+}
+
+.p-pc-link{
+  display: block;
+  width: 100%;
+  background-color: #FF8043;
+  padding: 5px;
+  border-radius: 10px 0 0 10px;
+}
+.p-pc-link:hover{
+  background-color: #66CDAA;
+}
+.p-pc-link img{
+  width: 100%;
+  margin: 0 auto;
+}
